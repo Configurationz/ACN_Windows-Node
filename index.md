@@ -46,7 +46,7 @@ sudo apt install ansible -y
 
 * Now, we are connected to windows-VM let's start the elevated powershell and run few commands
 
-* Here's the link to download/install script to enable [WinRM](https://raw.githubusercontent.com/ansible/ansible-documentation/c84880386a2f123ad5ee999bccfea4a502868663/examples/scripts/ConfigureRemotingForAnsible.ps1) on Windows-VM
+* Here's the link to download/install script to enable _**[WinRM](https://raw.githubusercontent.com/ansible/ansible-documentation/c84880386a2f123ad5ee999bccfea4a502868663/examples/scripts/ConfigureRemotingForAnsible.ps1)**_ on Windows-VM
 
 * Next, check the screenshots for further steps on powershell
     
