@@ -46,9 +46,7 @@ sudo apt install ansible -y
 
 * Now, we are connected to windows-VM let's start the elevated powershell and run few commands
 
-* Below is the link to download/install script to enable winRM on windows
-
-> [WinRM](https://raw.githubusercontent.com/ansible/ansible-documentation/c84880386a2f123ad5ee999bccfea4a502868663/examples/scripts/ConfigureRemotingForAnsible.ps1)
+* Here's the link to download/install script to enable [WinRM](https://raw.githubusercontent.com/ansible/ansible-documentation/c84880386a2f123ad5ee999bccfea4a502868663/examples/scripts/ConfigureRemotingForAnsible.ps1) on Windows-VM
 
 * Next, check the screenshots for further steps on powershell
     
@@ -56,18 +54,18 @@ sudo apt install ansible -y
     
     ![Preview](img/ans14.png)
 
-* Now, we also need to verify if python is pre-installed on windows-VM
+* Now, we also need to verify if python is pre-installed on Windows-VM
     
     ![Preview](img/ans10.png)
 
-* So, as we can see that python is not installed on windows-VM, so we need to install chocolatey and then we need to install python using chocolatey
+* So, as we can see that python is not installed on Windows-VM, so we need to install chocolatey and then we need to install python using chocolatey
 
-* With PowerShell, we must ensure Get-ExecutionPolicy is not Restricted in order to execute external commands. RemoteSigned or AllSigned are quite a bit more security
+* With PowerShell, we must ensure `Get-ExecutionPolicy` is not Restricted in order to execute external commands. `RemoteSigned` or `AllSigned` are quite a bit more enhanced security
 ```
 Get-ExecutionPolicy
 ```
 
-* If the policy is restricted, then we can change it to RemoteSigned or AllSigned
+* If the policy is `restricted`, then we can change it to `RemoteSigned` or `AllSigned`
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
