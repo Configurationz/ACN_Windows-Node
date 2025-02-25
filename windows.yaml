@@ -1,7 +1,6 @@
 ---
 - name: Manage windows servers
   hosts: all
-  become: yes
   tasks:
 
   - name: Create directory structure
@@ -16,7 +15,7 @@
 
   - name: Create a file from a Jinja2 template
     win_template:
-      src: .\foo.txt.j2
+      src: foo.txt.j2
       dest: C:\temp\folder\foo.txt
 
   - win_stat:
