@@ -95,6 +95,10 @@ python --version
 * Now we should be good with connecting the linux-vm with windows-VM 
 * Create a hosts.ini file on ubuntu with below content
 
+![Preview](img/ans12.png)
+
+![Preview](img/ans13.png)
+
 ```ini
 [win]
 <Windows-Server Public/Private IP-Address> or <Public/Private IP DNS name>
@@ -110,16 +114,13 @@ ansible_winrm_server_cert_validation=ignore
 /#ansible_become_method=yes
 ```
 
-![Preview](img/ans12.png)
 
-![Preview](img/ans13.png)
-
-![Preview](img/ans15.png)
-
-14. Now, let's Run win_ping
+* Now, let's Run win_ping
 ```
 ansible -i hosts.ini win -m win_ping
 ```
+![Preview](img/ans15.png)
+
 
 ## References ~
 
