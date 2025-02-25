@@ -121,6 +121,29 @@ ansible -i hosts.ini win -m win_ping
 ```
 ![Preview](img/ans15.png)
 
+* Okay, since everything seems promising, so let's try to run some sample scripts and also these sample scripts will be available in GitHub for your future references
+
+* Hence, the ansible commands would be -
+```bash
+ansible-playbook -i hosts.ini win_ssh.yaml
+```
+
+![Preview](img/ans16.png)
+
+```bash
+ansible-playbook -i hosts.ini windows.yaml
+```
+
+![Preview](img/ans17.png)
+
+* Also, as we can see the file `foo.txt.j2` which was copied from ubuntu to Windows-VM has something to say
+
+![Preview](img/ans18.png)
+
+* So, finally I would say it's kind of fun playing around with Ansible playbooks. And I really enjoy this stuff
+
+
+
 
 ## References ~
 
