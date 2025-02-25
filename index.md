@@ -16,7 +16,7 @@
   ![Preview](img/ans3.png)
 
 * Since, the python is present in ubuntu-vm, we'll start with further steps by installing Ansible
-* Remember, we only need to install Ansible on ACN 
+* Remember, we only need to install Ansible on Ansible Control Node (ACN) 
 
 * [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu)
 
