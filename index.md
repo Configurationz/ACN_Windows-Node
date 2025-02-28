@@ -9,14 +9,14 @@
 
 * Manually I have created the VM's but we can also create them from Terraform/ARM templates/Azure Biceps/PowerShell CLI
     
-    ![Preview](img/ans1.png)
+    ![Preview](imgs/ans1.png)
     
-    ![Preview](img/ans2.png)
+    ![Preview](imgs/ans2.png)
 
 * Next connect to the ubuntu VM and check if python is present or not.
 * So, as part of ansible installation python needs to be installed before installing ansible on Ansible Control Node (ACN) and should also be present on all the nodes where we'll connect and install the applications
   
-  ![Preview](img/ans3.png)
+  ![Preview](imgs/ans3.png)
 
 * Since, the python is present in ubuntu-vm, we'll start with further steps by installing Ansible
 * Remember, we only need to install Ansible on Ansible Control Node (ACN) 
@@ -32,17 +32,17 @@ sudo apt install ansible -y
 
 * Confirm if the ansible is installed on ubuntu
     
-    ![Preview](img/ans4.png)
+    ![Preview](imgs/ans4.png)
 
 * Now, let's try to connect the windows server from our local machine
 
-    ![Preview](img/ans5.png)
+    ![Preview](imgs/ans5.png)
 
-    ![Preview](img/ans6.png)
+    ![Preview](imgs/ans6.png)
 
-    ![Preview](img/ans7.png)
+    ![Preview](imgs/ans7.png)
 
-    ![Preview](img/ans8.png)
+    ![Preview](imgs/ans8.png)
 
 * Now, we are connected to windows-VM let's start the elevated powershell and run few commands
 
@@ -50,13 +50,13 @@ sudo apt install ansible -y
 
 * Next, check the screenshots for further steps on powershell
     
-    ![Preview](img/ans9.png)
+    ![Preview](imgs/ans9.png)
     
-    ![Preview](img/ans14.png)
+    ![Preview](imgs/ans14.png)
 
 * Now, we also need to verify if python is pre-installed on Windows-VM
     
-    ![Preview](img/ans10.png)
+    ![Preview](imgs/ans10.png)
 
 * So, as we can see that python is not installed on Windows-VM, so we need to install chocolatey and then we need to install python using chocolatey
 
@@ -78,7 +78,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 * Wait a few seconds for the command to complete.
 * If you don't see any errors, you are ready to use Chocolatey! Type `choco` or `choco -?`
     
-    ![Preview](img/ans11.png)
+    ![Preview](imgs/ans11.png)
 
 * Next step is to restart the windows server to get the installations effects
 
@@ -95,9 +95,9 @@ python --version
 * Now we should be good with connecting the linux-vm with windows-VM 
 * Create a hosts.ini file on ubuntu with below content
 
-![Preview](img/ans12.png)
+![Preview](imgs/ans12.png)
 
-![Preview](img/ans13.png)
+![Preview](imgs/ans13.png)
 
 ```ini
 [win]
@@ -119,7 +119,7 @@ ansible_winrm_server_cert_validation=ignore
 ```
 ansible -i hosts.ini win -m win_ping
 ```
-![Preview](img/ans15.png)
+![Preview](imgs/ans15.png)
 
 * Okay, since everything seems promising, so let's try to run some sample scripts and also these sample scripts will be available in GitHub for your future references
 
@@ -128,17 +128,17 @@ ansible -i hosts.ini win -m win_ping
 ansible-playbook -i hosts.ini win_ssh.yaml
 ```
 
-![Preview](img/ans16.png)
+![Preview](imgs/ans16.png)
 
 ```bash
 ansible-playbook -i hosts.ini windows.yaml
 ```
 
-![Preview](img/ans17.png)
+![Preview](imgs/ans17.png)
 
 * Also, as we can see the file `foo.txt.j2` which was copied from ubuntu to Windows-VM has something to say
 
-![Preview](img/ans18.png)
+![Preview](imgs/ans18.png)
 
 * So, finally I would say it's kind of fun playing around with Ansible playbooks. And I really enjoy this stuff
 
@@ -149,4 +149,4 @@ ansible-playbook -i hosts.ini windows.yaml
 
 > _**[How can I see what ports are open on my machine?](https://askubuntu.com/questions/9368/how-can-i-see-what-ports-are-open-on-my-machine){:target="_blank"}**_
 
-![](img/ansible_ico.png)
+![](imgs/ansible_ico.png)
