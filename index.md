@@ -149,3 +149,4 @@ ansible-playbook -i hosts.ini windows.yaml
 
 > _**[How can I see what ports are open on my machine?](https://askubuntu.com/questions/9368/how-can-i-see-what-ports-are-open-on-my-machine){:target="_blank"}**_
 
+![](img/ansible_ico.png)
